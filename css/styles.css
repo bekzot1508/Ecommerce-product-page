@@ -206,6 +206,8 @@ select:-webkit-autofill:focus {
 
 /* site icon  */
 .site-header__cart {
+  margin-right: 46px;
+  margin-left: 24px;
 }
 .site-header__cart-link {
   display: flex;
@@ -237,6 +239,24 @@ select:-webkit-autofill:focus {
   object-fit: contain;
 }
 
+avatar user 
+.site-header__profile-wrapper {
+}
+.site-header__profile-link {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+.site-header__profile-link:hover {
+  border-color: var(--accent-color);
+}
+.site-header__profile-avatar {
+  width: 50px;
+  height: 50px;
+}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
