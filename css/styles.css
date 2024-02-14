@@ -154,6 +154,152 @@ select:-webkit-autofill:focus {
   object-fit: contain;
 }
 
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+.button--block {
+  display: flex;
+  width: 100%;
+}
+.button--wide {
+  max-width: 272px;
+}
+.button:hover {
+  background-color: var(--accent-color-hover);
+}
+.button:active {
+  transform: translateY(2px);
+}
+
+.button__inner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 20px 18px;
+}
+.button__prepend {
+  margin-right: 16px;
+}
+
+/* .shopping-cart-content  */
+.shopping-cart-products {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.shopping-cart-product__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+/* .item-shopping-cart-products  */
+.item-shopping-cart-products {
+  display: flex;
+  align-items: flex-start;
+}
+.item-shopping-cart-products__img {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.item-shopping-cart-products__info {
+  flex-grow: 1;
+  width: 100%;
+  margin-right: 18px;
+  overflow: hidden;
+}
+.item-shopping-cart-products__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+.item-shopping-cart-products__costsubtotal {
+  color: var(--text-color-dark);
+}
+.item-shopping-cart-products__remove-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  align-self: center;
+  color: #C3CAD9;
+}
+.item-shopping-cart-products__remove-button:hover {
+  color: var(--text-color-dark);
+}
+.item-shopping-cart-products__remove-button:active {
+  opacity: 0.6;
+}
+.item-shopping-cart-products__remove-icon {
+  display: block;
+  width: 14px;
+  height: 16px;
+}
+
+/* shopping cart  */
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 256px;
+  border-radius: 6px;
+  background-color: #fff;
+  
+}
+.shopping-cart--modal {
+  box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.5);
+}
+.shopping-cart__header {
+  padding: 24px 24px 27px;
+  border-bottom: 1px solid var(--divider-bg);
+}
+.shopping-cart__title {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color-dark);
+}
+.shopping-cart__inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  
+}
+
+.shopping-cart__empty {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.shopping-cart--empty .shopping-cart__empty {
+  display: none;
+}
+.shopping-cart--empty .shopping-cart-content {
+  display: none;
+}
+.shopping-cart__products {
+  margin-bottom: 24px;
+}
+
 /* site header  */
 .site-header {
 }
@@ -161,6 +307,7 @@ select:-webkit-autofill:focus {
   margin-right: auto;
 }
 .site-header__container {
+  position: relative;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--divider-bg);
@@ -233,13 +380,17 @@ select:-webkit-autofill:focus {
   background-color: var(--accent-color);
   color: #fff;
 }
+
+.site-header__cart--empty .site-header__cart-product-count {
+  display: none;
+}
 .site-header__card-icon {
   width: 22px;
   height: 20px;
   object-fit: contain;
 }
 
-avatar user 
+/* avatar user  */
 .site-header__profile-wrapper {
 }
 .site-header__profile-link {
@@ -253,10 +404,33 @@ avatar user
 .site-header__profile-link:hover {
   border-color: var(--accent-color);
 }
+.site-header__profile-link:active {
+  opacity: 0.6;
+}
 .site-header__profile-avatar {
   width: 50px;
   height: 50px;
 }
+
+/* shopping cart modal  */
+.site-header__cart-modal{
+  display: none;
+}
+.site-header__cart-modal--open {
+  display: block;
+  position: absolute;
+  right: -76px;
+  top: 94px;
+  width: 360px;
+}
+
+
+
+
+
+
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
