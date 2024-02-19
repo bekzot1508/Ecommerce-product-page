@@ -96,9 +96,10 @@
     <div class="product-page">
       <div class="product-page__container container">
         <!-- PRODUCT-PAGE GALARY  -->
-        <div class="product-page__gallarr">
+        <div class="product-page__gallary">
           <div class="img-showcase">
             <div class="img-showcase__showcase">
+              <button class="img-showcase__lightbox-toggle js-lightbox-toggle"></button>
               <img class="img-showcase__active-img" src="./imgs/sneakers-1.jpg" alt="" width="445" height="445" 
                 srcset="imgs/sneakers-1.jpg 1x, imgs/sneakers-1@2x.jpg 2x">
             </div>
@@ -143,6 +144,68 @@
     </div>
   </main>
 
+
+  <!-- LIGHTBOX  -->
+  <div class="lightbox">
+    <div class="lightbox__inner">
+      <button class="lightbox__cloce">
+        <svg class="lightbox__cloce-icon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" 
+          d="M20 2.857 17.143 0 10 7.143 2.857 0 0 2.857 7.143 10 0 17.143 2.857 20 10 12.857 17.143 20 20 17.143 12.857 10 20 2.857Z" 
+          fill="currentColor"/></svg>
+      </button>
+
+      <div class="img-showcase img-showcase__lightbox">
+        <div class="img-showcase__showcase">
+          <button class="img-showcase__control img-shovcase__control--prev js-lightbox-control-prev" type="button" aria-label="reviouse">
+            <span class="img-showcase__control-inner">
+              <svg class="img-shovcase__control-icon" width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11 2-8 8 8 8" stroke="currentColor" stroke-width="3"/></svg>
+            </span>
+          </button>
+
+          <button class="img-showcase__control img-shovcase__control--next js-lightbox-control-next" type="button" aria-label="next">
+            <span class="img-showcase__control-inner">
+              <svg class="img-shovcase__control-icon"  width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m2 2 8 8-8 8" stroke="currentColor" stroke-width="3"/></svg>
+            </span>
+          </button>
+
+          <img class="img-showcase__active-img" src="./imgs/sneakers-1.jpg" alt="" width="445" height="445" 
+            srcset="imgs/sneakers-1.jpg 1x, imgs/sneakers-1@2x.jpg 2x">
+        </div>
+
+        <ul class="img-showcase__thumbnails">
+
+          <li class="img-showcase__thumbnail img-showcase__thumbnail-active">
+            <button class="img-showcase__thubmnail-button js-img-lightbox__thubmnail-button" type="button" aria-label="image-1" data-img-showcase-big="imgs/sneakers-1.jpg" data-img-showcase-retina="imgs/sneakers-1@2x.jpg">
+              <img class="img-showcase__thubmnail-img" src="./imgs/sneakers-1-thumbnail.jpg" alt="" width="88" height="88" 
+                srcset="imgs/sneakers-1-thumbnail.jpg 1x, imgs/sneakers-1-thumbnail@2x.jpg 2x">
+            </button>
+          </li>
+
+          <li class="img-showcase__thumbnail">
+            <button class="img-showcase__thubmnail-button js-img-lightbox__thubmnail-button" type="button" aria-label="image-2" data-img-showcase-big="imgs/sneakers-2.jpg" data-img-showcase-retina="imgs/sneakers-2@2x.jpg">
+              <img class="img-showcase__thubmnail-img" src="./imgs/sneakers-2-thumbnail.jpg" alt="" width="88" height="88" 
+                srcset="imgs/sneakers-2-thumbnail.jpg 1x, imgs/sneakers-2-thumbnail@2x.jpg 2x">
+            </button>
+          </li>
+
+          <li class="img-showcase__thumbnail">
+            <button class="img-showcase__thubmnail-button js-img-lightbox__thubmnail-button" type="button" aria-label="image-3" data-img-showcase-big="imgs/sneakers-3.jpg" data-img-showcase-retina="imgs/sneakers-3@2x.jpg">
+              <img class="img-showcase__thubmnail-img" src="./imgs/sneakers-3-thumbnail.jpg" alt="" width="88" height="88" 
+                srcset="imgs/sneakers-3-thumbnail.jpg 1x, imgs/sneakers-3-thumbnail@2x.jpg 2x">
+            </button>
+          </li>
+
+          <li class="img-showcase__thumbnail">
+            <button class="img-showcase__thubmnail-button js-img-lightbox__thubmnail-button" type="button" aria-label="image-4" data-img-showcase-big="imgs/sneakers-4.jpg" data-img-showcase-retina="imgs/sneakers-4@2x.jpg">
+              <img class="img-showcase__thubmnail-img" src="./imgs/sneakers-4-thumbnail.jpg" alt="" width="88" height="88" 
+                srcset="imgs/sneakers-4-thumbnail.jpg 1x, imgs/sneakers-4-thumbnail@2x.jpg 2x">
+            </button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
