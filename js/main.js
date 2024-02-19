@@ -147,6 +147,8 @@ const elheaderCartCount = document.querySelector(".site-header__cart-product-cou
 const elQtyCount = document.querySelector(".cost__qty-count")
 const elCostSubtotal = document.querySelector(".item-shopping-cart-products__costsubtotal")
 const elShoppingCart = document.querySelector(".shopping-cart")
+const elRemoveItemButton = document.querySelector(".item-shopping-cart-products__remove-button")
+
 
 elProductQuantityIncrementButton.addEventListener('click', function () {
     elquantity.textContent = parseInt(elquantity.textContent, 10) + 1;
@@ -175,3 +177,8 @@ if (qty > 0) {
 })
 
 
+elRemoveItemButton.addEventListener('click', function () {
+    elShoppingCart.classList.add('shopping-cart--empty')
+    elheaderCartCount.textContent = 0
+    elquantity.textContent = 0
+})
