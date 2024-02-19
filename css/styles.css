@@ -176,6 +176,7 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 .button--wide {
+  width: 100%;
   max-width: 272px;
 }
 .button:hover {
@@ -195,6 +196,19 @@ select:-webkit-autofill:focus {
 .button__prepend {
   margin-right: 16px;
 }
+
+/* BUDGE  */
+.badge {
+  display: inline-block;
+  padding: 8px 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: normal;
+  color: var(--accent-color);
+  border-radius: 6px;
+  background-color: var(--light-bg);
+}
+
 
 /* .shopping-cart-content  */
 .shopping-cart-products {
@@ -231,6 +245,7 @@ select:-webkit-autofill:focus {
   text-transform: capitalize;
 }
 .item-shopping-cart-products__costsubtotal {
+  margin-left: 10px;
   color: var(--text-color-dark);
 }
 .item-shopping-cart-products__remove-button {
@@ -607,7 +622,7 @@ select:-webkit-autofill:focus {
 .product-page__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   max-width: 1063px;
 }
 .product-page__gallary {
@@ -620,6 +635,99 @@ select:-webkit-autofill:focus {
   max-width: 445px;
 }
 
+.product-page__info {
+  width: 100%;
+  max-width: 445px;
+  margin-top: 60px;
+}
+
+.product-info__manufacturer {
+  color: var(--accent-color);
+  font-size: 13px;
+  line-height: normal;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 27px;
+}
+.product-info__title {
+  font-size: 44px;
+  line-height: 48px;
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: var(--text-color-dark);
+}
+.product-info__description {
+  margin-top: 0;
+  margin-bottom: 24px;
+
+}
+.product-info__price-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-info__price {
+  margin-right: 16px;
+  font-size: 28px;
+  line-height: normal;
+  font-weight: bold;
+  color: var(--text-color-dark);
+}
+
+.product-info__old-price {
+  display: block;
+  margin-bottom: 32px;
+  color: #b6bcc8;
+  font-weight: bold;
+}
+
+.product-info__cart-actions {
+  display: flex;
+  align-items: center;
+}
+.product-info__quantity-wrapper {
+  display: flex;
+  align-items: center;
+  width: 156px;
+  background-color: var(--light-bg);
+  border-radius: 10px;
+}
+.product-info__quantity-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  width: 52px;
+  border-radius: 5px;
+  font-size: 30px;
+  line-height: 25px;
+  font-weight: bold;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+.product-info__quantity-button:last-child {
+  margin-left: -30px;
+  
+}
+.product-info__quantity-button:hover {
+  color: var(--accent-color-hover);
+}
+.product-info__quantity-button:active {
+  opacity: 0.6;
+}
+.product-info__quantity {
+  width: 52px;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: bold;
+  margin-left: 15px;
+  padding-top: 5px;
+}
+.button__icon {
+}
+.button__text {
+}
 
 
 

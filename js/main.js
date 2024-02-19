@@ -133,3 +133,45 @@ elLightboxControlPrev.addEventListener('click', function () {
     elImglightboxShowcaseActiveImg.srcset = `${elNextactiveItem.children[0].dataset.imgShowcaseBig} 1x, 
     ${elNextactiveItem.children[0].dataset.imgShowcaseRetina} 2x`;
 })
+
+
+
+
+
+
+// BUTTONCS 
+const elProductQuantityIncrementButton = document.querySelector(".js-product-quantity-increment-button")
+const elProductQuantityDicrementButton = document.querySelector(".js-product-quantity-dicrement-button")
+const elquantity = document.querySelector(".product-info__quantity")
+const elheaderCartCount = document.querySelector(".site-header__cart-product-count")
+const elQtyCount = document.querySelector(".cost__qty-count")
+const elCostSubtotal = document.querySelector(".item-shopping-cart-products__costsubtotal")
+const elShoppingCart = document.querySelector(".shopping-cart")
+
+elProductQuantityIncrementButton.addEventListener('click', function () {
+    elquantity.textContent = parseInt(elquantity.textContent, 10) + 1;
+    elheaderCartCount.textContent = elquantity.textContent
+    elQtyCount.textContent =  elquantity.textContent
+    elCostSubtotal.textContent = `$${parseInt(elquantity.textContent, 10) * 125}`
+
+    if (elheaderCartCount.textContent > 0) {
+        elShoppingCart.classList.remove('shopping-cart--empty')
+    }
+})
+
+elProductQuantityDicrementButton.addEventListener('click', function () {
+const qty = parseInt(elquantity.textContent, 10);
+
+if (qty > 0) {
+    elquantity.textContent =  qty - 1;
+    elheaderCartCount.textContent = elquantity.textContent
+    elQtyCount.textContent =  elquantity.textContent
+    elCostSubtotal.textContent = `$${parseInt(elquantity.textContent, 10) * 125}`
+    
+    if (elheaderCartCount.textContent > 0) {
+        elShoppingCart.classList.remove('shopping-cart--empty')
+    }
+}
+})
+
+
